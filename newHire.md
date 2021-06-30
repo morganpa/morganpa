@@ -23,29 +23,30 @@
     1. click windows
     2. click the down arrow next to the `+` (where the second "tab" would be)
     3. select ubuntu
-4. Update your installation
-   1. run `sudo apt-get udpate && sudo apt-get upgrade -y`
-5. Install Visual Studio code
-    1. navigate here https://code.visualstudio.com/ and follow necessary steps to install
-6. Install necessary packages
-    1. Install necessary apt packages with the following command
-    ```
+4. Update your installation and install necessary packages
+    ```sh
+    # update installation
+    sudo apt-get udpate && sudo apt-get upgrade -y
+    # install helpful tools
     sudo apt-get install zsh curl jq git unzip wget zip python3 python3-pip
-    ```
-    2. Install aws command line tools
-    ```
+    # install aws
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install
-    ```
-7. start using zsh with
-    ```
+    # start using zsh
     chsh -s $(which zsh)
+    # use oh-my-zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
+
 8. install terraform (replace <TERRAFORMVERSION> with the latest release of terraform which can be found here https://www.terraform.io/downloads.html)
     ```
     wget https://releases.hashicorp.com/terraform/<TERRAFORMVERSION>/terraform_<TERRAFORMVERSION>_linux_amd64.zip && \
     unzip terraform_<TERRAFORMVERSION>_linux_amd64.zip -d /usr/bin
     ```
+
+5. Install Visual Studio code
+    1. navigate here https://code.visualstudio.com/ and follow necessary steps to install
+
+
 9. go get your aws keys
     navigate to `https://retailsuccesscloud.awsapps.com/start#/` in your browser
     1. sign in using
